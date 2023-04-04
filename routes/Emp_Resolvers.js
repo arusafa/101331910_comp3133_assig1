@@ -1,4 +1,4 @@
-const Emp_Model = require("../models/Emp_Model");
+const Emp_Model = require("../models/emp_model");
 
 const Emp_Resolvers = {
   Query: {

@@ -25,6 +25,6 @@ const EmployeeSchema = new mongoose.Schema({
     }
 });
 
-const Emp_Model = mongoose.model('Employee', EmployeeSchema);
-module.exports = Emp_Model;
+const Emp_model = mongoose.model('Employee', EmployeeSchema);
+module.exports = Emp_model;
 

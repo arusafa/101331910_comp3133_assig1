@@ -1,4 +1,4 @@
-const User_Model = require("../models/User_Model");
+const User_Model = require("../models/user_model");
 
 
 const User_Resolvers = {
