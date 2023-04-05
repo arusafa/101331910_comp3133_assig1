@@ -28,12 +28,20 @@ const User_Resolvers = {
       return user;
     }
   },
-  Mutation: {
+   Mutation: {
     registerUser: async (_, { input }) => {
       const newUser = new User_Model(input);
       await newUser.save();
       console.log(newUser + "\nUser created successfully");
       return newUser;
+    },
+    deleteUser: async (_, { id }) => {
+      const deletedUser = await User_Model.findByIdAndDelete(id);
+      if (!deletedUser) {
+        throw new Error("User not found");
+      }
+      console.log(deletedUser + "\nUser deleted successfully");
+      return deletedUser;
     },
   },
 };
